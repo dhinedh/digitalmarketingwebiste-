@@ -53,7 +53,7 @@ const Navbar = () => {
                     {links.map(l => (
                         <Link key={l.to} to={l.to} className="drawer-link">{l.label}</Link>
                     ))}
-                    <Link to="/contact" className="btn-primary" style={{ width: '100%', justifyContent: 'center', marginTop: '1rem' }}>Let's Talk</Link>
+                    <Link to="/contact" className="btn-primary drawer-link-cta">Let's Talk</Link>
                 </div>
             </div>
         </>

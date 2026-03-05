@@ -266,3 +266,39 @@ img {
 ::-webkit-scrollbar-thumb:hover {
   background: #3F3F46;
 }
+
+/* =========================================
+   MOBILE RESPONSIVENESS (GLOBAL)
+   ========================================= */
+
+@media (max-width: 768px) {
+  :root {
+    --radius-xl: 32px;
+    /* Slightly smaller radius for mobile elegance */
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  h1,
+  h2 {
+    letter-spacing: -0.04em;
+  }
+
+  .btn-primary,
+  .btn-glass {
+    padding: 1rem 2rem;
+    font-size: 0.95rem;
+    border-radius: 12px;
+    width: 100%;
+    letter-spacing: 0.02em;
+  }
+
+  .section-label {
+    letter-spacing: 4px;
+    /* More spaced out for elegance */
+    font-size: 0.7rem;
+    opacity: 0.8;
+  }
+}

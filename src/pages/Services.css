@@ -354,3 +354,80 @@
         margin: 0 auto;
     }
 }
+
+@media (max-width: 768px) {
+    .s2-hero {
+        padding: 10rem 0 5rem;
+        text-align: center;
+    }
+
+    .s2-hero-title {
+        font-size: clamp(2.5rem, 14vw, 4.5rem);
+    }
+
+    .s2-hero-sub {
+        font-size: 1.1rem;
+        margin: 0 auto;
+    }
+
+    .s2-chapters {
+        padding: 5rem 0;
+    }
+
+    .s2-chapter {
+        padding: 8rem 0;
+    }
+
+    .s2-ch-num {
+        font-size: 6rem;
+        top: -2rem;
+    }
+
+    .s2-ch-content h2 {
+        font-size: 2.4rem;
+        letter-spacing: -0.04em;
+        margin-bottom: 2rem;
+    }
+
+    .s2-ch-philosophy {
+        font-size: 1.15rem;
+        line-height: 1.5;
+        opacity: 0.9;
+        margin-bottom: 3rem;
+    }
+
+    .s2-ch-visual {
+        margin-top: 5rem;
+    }
+
+    .s2-media-float {
+        display: none;
+        /* Hide floating info on small screens to save space */
+    }
+
+    .s2-why {
+        padding: 8rem 0;
+    }
+
+    .s2-why-title {
+        font-size: 3rem;
+        margin-bottom: 4rem;
+    }
+
+    .s2-pricing {
+        padding: 8rem 0;
+    }
+
+    .s2-pricing-header {
+        margin-bottom: 5rem;
+    }
+
+    .s2-price-card {
+        padding: 3.5rem 2.5rem;
+        border-radius: 32px;
+    }
+
+    .s2-price-amount strong {
+        font-size: 3.2rem;
+    }
+}
