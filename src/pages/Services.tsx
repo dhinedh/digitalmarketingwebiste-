@@ -52,9 +52,24 @@ const chapters = [
 ];
 
 const pricing = [
-    { name: 'Starter', price: '₹15K', best: false, features: 'Content + Management' },
-    { name: 'Growth', price: '₹40K', best: true, features: 'Content + Reels + Ads' },
-    { name: 'Dominance', price: 'Custom', best: false, features: 'Full Stack + Ad Film' }
+    {
+        name: 'Starter',
+        price: '₹15K',
+        best: false,
+        features: ['12 Strategy Posts', 'Community Mgmt', 'Monthly Reporting', 'Creative Support']
+    },
+    {
+        name: 'Growth',
+        price: '₹40K',
+        best: true,
+        features: ['30 Content Pieces', '4 Cinematic Reels', 'Meta Ads Mgmt', 'Newsjacking Strategy', 'Priority Execution']
+    },
+    {
+        name: 'Dominance',
+        price: 'Custom',
+        best: false,
+        features: ['Full Stack Content', 'Monthly Ad Film', 'Google Funnel Ops', 'Influencer Scale', 'Omnichannel Strategy']
+    }
 ];
 
 /* ─── COMPONENT ─────────────────────────────── */
@@ -154,20 +169,23 @@ const Services = () => {
                         <h2>Simple. <span className="text-gradient">Powerful.</span></h2>
                     </div>
 
-                    <div className="s2-price-table">
+                    <div className="s2-pricing-grid">
                         {pricing.map((p, i) => (
-                            <div key={i} className="s2-price-row">
-                                <div>
-                                    <h3>{p.name}</h3>
-                                    <p style={{ color: 'var(--text-secondary)' }}>{p.features}</p>
+                            <div key={i} className={`s2-price-card animate-reveal ${p.best ? 's2-price-featured' : ''}`} style={{ animationDelay: `${i * 0.1}s` }}>
+                                {p.best && <span className="s2-price-badge">Most Popular</span>}
+                                <h3>{p.name}</h3>
+                                <div className="s2-price-amount">
+                                    <strong>{p.price}</strong>
+                                    <span>/mo</span>
                                 </div>
-                                <div className="s2-price-tag">{p.price}</div>
-                                <div>
-                                    {p.best && <span className="section-label" style={{ background: 'var(--accent-orange)', color: 'white', padding: '4px 12px' }}>Popular</span>}
-                                </div>
-                                <div className="text-right">
-                                    <Link to="/contact" className="btn-glass">Start <ArrowRight size={18} /></Link>
-                                </div>
+                                <ul className="s2-price-list">
+                                    {(p.features as string[]).map((f, idx) => (
+                                        <li key={idx}><Zap size={14} /> {f}</li>
+                                    ))}
+                                </ul>
+                                <Link to="/contact" className="s2-price-btn">
+                                    Start with {p.name}
+                                </Link>
                             </div>
                         ))}
                     </div>
@@ -178,6 +196,5 @@ const Services = () => {
     );
 };
 
+
 export default Services;
-
-
