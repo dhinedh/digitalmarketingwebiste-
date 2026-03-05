@@ -1,0 +1,5 @@
+/* App.css is mostly handled by index.css, keeping this for potential App-level specifics */
+.page-wrapper {
+  position: relative;
+  overflow-x: hidden;
+}

@@ -1,0 +1,339 @@
+/* ============================================
+   CONTACT — Light Theme
+   ============================================ */
+.contact-page {
+    background: var(--bg-page);
+}
+
+/* Hero */
+.contact-hero {
+    position: relative;
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #0F0F0F;
+}
+
+.contact-hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+}
+
+.contact-hero-scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.88) 40%, rgba(0, 0, 0, 0.4));
+}
+
+.contact-hero-body {
+    position: relative;
+    z-index: 10;
+    padding-top: 140px;
+    padding-bottom: 5rem;
+}
+
+.contact-hero-body h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    color: white;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin: 1rem 0 1.2rem;
+    line-height: 1.05;
+}
+
+.contact-hero-body p {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Body Grid */
+.contact-body {
+    padding: 7rem 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 5rem;
+    align-items: start;
+}
+
+/* Form */
+.contact-form-wrap h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin-bottom: 0.8rem;
+}
+
+.form-subtitle {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.cf {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cf-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.cf-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cf-group label {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cf-group input,
+.cf-group select,
+.cf-group textarea {
+    background: var(--bg-section);
+    border: 1.5px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    padding: 0.9rem 1.1rem;
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.cf-group input:focus,
+.cf-group select:focus,
+.cf-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-orange);
+    box-shadow: 0 0 0 4px rgba(255, 92, 0, 0.1);
+    background: white;
+}
+
+.cf-group input::placeholder,
+.cf-group textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.select-wrap {
+    position: relative;
+}
+
+.select-wrap::after {
+    content: '▼';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    pointer-events: none;
+}
+
+.cf-group select {
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.cf-group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.cf-submit {
+    align-self: flex-start;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+}
+
+/* Success Message */
+.success-msg {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 3rem;
+    background: var(--bg-section);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+}
+
+.success-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--accent-teal-light);
+    color: var(--accent-teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.success-msg h3 {
+    font-size: 1.5rem;
+}
+
+.success-msg p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* Info Block */
+.contact-info-wrap {
+    position: sticky;
+    top: 120px;
+}
+
+.info-block {
+    background: var(--bg-section);
+    border-radius: var(--radius-lg);
+    padding: 3rem;
+    border: 1px solid var(--border-light);
+}
+
+.info-block h2 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.info-block>p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.info-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.info-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--accent-orange-light);
+    color: var(--accent-orange);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.info-row div strong {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 0.2rem;
+}
+
+.info-row div span,
+.info-row div a {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    transition: color 0.2s;
+}
+
+.info-row div a:hover {
+    color: var(--accent-orange);
+}
+
+/* Map visual */
+.map-visual {
+    width: 100%;
+    height: 200px;
+    border-radius: var(--radius-md);
+    background: #E8EEF8;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+}
+
+.map-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--border-light) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border-light) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.map-pin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.pin-pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 48px;
+    height: 48px;
+    background: var(--accent-orange);
+    border-radius: 50%;
+    opacity: 0.25;
+    transform: translate(-50%, -50%);
+    animation: pin-anim 2s ease-in-out infinite;
+}
+
+@keyframes pin-anim {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .contact-info-wrap {
+        position: static;
+    }
+}
+
+@media (max-width: 576px) {
+    .cf-row {
+        grid-template-columns: 1fr;
+    }
+
+    .info-block {
+        padding: 2rem;
+    }
+}
