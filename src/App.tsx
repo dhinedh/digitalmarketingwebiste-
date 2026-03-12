@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+import AIBot from './components/AIBot';
 import SpiderNetwork from './components/SpiderNetwork';
 import LoadingScreen from './components/LoadingScreen';
 import Home from './pages/Home';
@@ -26,6 +27,7 @@ function App() {
                 </Routes>
                 <Footer />
                 <FloatingWhatsApp />
+                <AIBot />
             </div>
         </Router>
     );
